@@ -1,0 +1,45 @@
+Please enter the date of month below
+Date: 5
+Month: 12
+Year: 2021
+Date today: 5.12.2021
+This system will check the price of fruit by entering the name or the fruit code
+Please enter the fruit code or name: Kuci
+Fruit price per kilogram: RM10
+Proceed if you want to order(Y/N): Y
+What do you want to order: Kuci
+Total Kilogram you need (KG): 5
+Total fruit price : RM50.0
+Enter the percentage of the discount (If there is): 5
+Total fruit price after discount : 47.5
+Enter the delivery location: Kg bubul
+Location distance: 4KM
+Delivery fee Kg bubul: RM5
+Total payment cost: RM52.5
+Thank you for purchasing with us.
+System to check the resistance of the fruits received
+Enter the fruit name: Kuci
+Enter the fruit code: 445566
+
+
+Enter the fruit storage method(RTP): RTP
+Fruit resistance at room temperature (day): 5
+Fruit durability to date: 10.12.2021
+
+
+Enter the fruit storage method(Refrigerator): Refrigerator
+Fruit resistance in Refrigerator (day): 15
+Fruit durability to date: 20.12.2021
+
+
+Enter the fruit storage method(Freezer): Freezer
+Fruit resistance at Freezer (day): 25
+Fruit durability to date: 30.12.2021
+
+
+
+Proceed if you want to claim 5 percent discount coupon for every purchase you made with us
+Send your spoiled fruits to our marchandise and get 5 percent from SDN for every 500g.
+Please enter the total weight of your spoiled fruit? 800
+Total 5 percent voucher you get is: 1
+Thank you for your contribution
