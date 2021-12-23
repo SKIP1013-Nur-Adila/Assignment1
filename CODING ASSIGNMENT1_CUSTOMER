@@ -1,0 +1,152 @@
+package assignmentOne;
+import java.util.Scanner;
+public class E_commerce_customer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		Scanner input=new Scanner(System.in);
+		
+		int fruitprice,kilogram,code,gram,voucher;
+		String orderbuah,buah,location,suhubilik,petiais,sejukbeku,buah1;
+		double totalorder,percentage,totalorder1,total,peratusdiskaun;
+		char Y;
+		
+		
+		//initialize	
+		int k_buah_bilik = 5, k_buah_sejuk = 25, k_buah_peti = 15, tanggal=0, bulan=0, tahun=0, tarikh = 0,jaraklokasi=4,cajpenghantaran=5;
+		
+		
+		
+		//Tarikh hari user input
+		System.out.println("Please enter the date of month below");
+		System.out.print("Date: ");
+		tanggal=input.nextInt();
+		System.out.print("Month: ");
+		bulan=input.nextInt();
+		System.out.print("Year: ");
+		tahun=input.nextInt();
+		
+		//tarikh2= tanggal1+bulan1+tahun1;
+		String tarikh2=Integer.toString(tarikh),tanggal1=Integer.toString(tanggal),bulan1=Integer.toString(bulan),tahun1=String.valueOf(tahun);
+		
+		tarikh2=tanggal1 + "." + bulan1+"." + tahun1;
+		
+		System.out.println("Date today: " + tarikh2);
+		
+	//check harga buah
+		//System manager - Manager input code berserta nama buah dan harga
+		System.out.println("This system will check the price of fruit by entering the name or the fruit code");
+		System.out.print("Please enter the fruit code or name: ");
+		buah=input.next();
+		fruitprice=10;
+		System.out.println("Fruit price per kilogram: " + "RM" + fruitprice);
+		
+	//user proceed order
+		System.out.print("Proceed if you want to order(Y/N): ");
+		Y=input.next().charAt(0);
+		
+	//system taking order
+		System.out.print("What do you want to order: ");
+		orderbuah=input.next();
+		System.out.print("Total Kilogram you need (KG): ");
+		kilogram=input.nextInt();
+		
+	//Detect the price and kilogram
+		totalorder=fruitprice*kilogram;
+		System.out.println("Total fruit price : " + "RM" + totalorder);
+		
+	//discount from the spoiled fruit voucher
+		System.out.print("Enter the percentage of the discount (If there is): ");
+		peratusdiskaun=input.nextDouble();
+		
+		percentage= peratusdiskaun; // detect dri kod diskaun
+		totalorder1 = (totalorder - ((percentage * totalorder) / 100));
+		
+		System.out.println("Total fruit price after discount : " + totalorder1);
+		
+		System.out.print("Enter the delivery location: ");
+		location=input.nextLine();
+		location=input.nextLine();
+		
+		
+	//Jarak perjalanan dan delivery fee
+		//detect from manager system for the distance and price based on distance
+		
+		System.out.println("Location distance: " + jaraklokasi + "KM");
+		System.out.println("Delivery fee " + location  + ": RM" + cajpenghantaran);
+		
+		total= totalorder1+cajpenghantaran;
+		
+	//system check the total cost	
+		System.out.println("Total payment cost: " + "RM" + total);
+		System.out.println("Thank you for purchasing with us.");
+		
+		
+		System.out.println("System to check the resistance of the fruits received");
+		
+	//System check the fruit details
+		
+		
+		System.out.print("Enter the fruit name: ");
+		buah1=input.nextLine(); 
+		//System manager-code and name of fruit
+		//tarikh depends on manager system
+		
+		System.out.print("Enter the fruit code: ");
+		code=input.nextInt();//(6 number) Code buah terletak pada setiap buah merujuk kepada tarikh iya dipetik/ketahann dlm pelbagai keadaan 
+		
+	//Check details
+		//suhu bilik	
+		System.out.println("\n");
+		System.out.print("Enter the fruit storage method(RTP): ");
+		
+		suhubilik=input.next();
+		System.out.println("Fruit resistance at room temperature (day): " + k_buah_bilik );
+		System.out.println("Fruit durability to date: " + "10.12.2021");
+		
+		//peti ais
+		System.out.println("\n");
+		// ketahanan buah dalam peti ais dan tarikh sehingga ianya tahan
+		System.out.print("Enter the fruit storage method(Refrigerator): ");
+		
+		petiais=input.next();
+		//petiais=input.next();
+		System.out.println("Fruit resistance in Refrigerator (day): " + k_buah_peti);
+		System.out.println("Fruit durability to date: "+ "20.12.2021"); 
+		
+	//Sejuk beku 
+		System.out.println("\n");
+		System.out.print("Enter the fruit storage method(Freezer): ");
+		
+		sejukbeku=input.next();
+		//sejukbeku=input.next();
+		System.out.println("Fruit resistance at Freezer (day): " + k_buah_sejuk);
+		System.out.println("Fruit durability to date: "+"30.12.2021");
+	
+		
+		System.out.println("\n");
+		
+	//claim coupon discount 
+		
+		System.out.println("\nProceed if you want to claim 5 percent discount coupon for every purchase you made with us");
+		
+		System.out.println("Send your spoiled fruits to our marchandise and get 5 percent from SDN for every 500g.");
+		
+		System.out.print("Please enter the total weight of your spoiled fruit? ");
+		gram=input.nextInt();
+		
+		
+		voucher= gram/500 ;
+		
+		
+		System.out.println("Total 5 percent voucher you get is: " + voucher);
+		
+		
+		System.out.println("Thank you for your contribution");
+		
+	}
+
+}
